@@ -13,6 +13,10 @@ You've got a team of Committers. But who's the best?
     # Run
     always-be-contributing simplymeasured
 
+home :: https://github.com/josephholsten/always_be_contributing
+rdoc :: http://rdoc.info/gems/always_be_contributing
+bugs :: 
+
 == TODO
 
 - Travis CI integrations

@@ -10,22 +10,23 @@ You've got a team of Committers. But who's the best?
     echo machine api.github.com login josephholsten password sekret >> ~/.netrc
     # Run
     always-be-contributing simplymeasured
+    
 
-[home](https://github.com/josephholsten/always_be_contributing)
-[rdoc](http://rdoc.info/gems/always_be_contributing)
-[bugs](https://github.com/josephholsten/always_be_contributing/issues)
+* [home](https://github.com/josephholsten/always_be_contributing)
+* [rdoc](http://rdoc.info/gems/always_be_contributing)
+* [bugs](https://github.com/josephholsten/always_be_contributing/issues)
+* [code quality](https://codeclimate.com/github/josephholsten/always_be_contributing)
 
 ## TODO
 
 * Travis CI integrations
-* tdd achievments ala [nose](http://exogen.github.io/nose-achievements/)
+* tdd achievement ala [nose](http://exogen.github.io/nose-achievements/)
 
-## Metrics
+### Metrics
 
-* contributions per month
 * consecutive days streak
 
-## leaderboard groups
+### Leaderboard Groups
 
 * org per member
 * single project contributors

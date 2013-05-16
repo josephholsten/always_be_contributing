@@ -1,0 +1,18 @@
+--- !ruby/object:RDoc::Options 
+encoding: 
+static_path: []
+
+rdoc_include: 
+- .
+charset: UTF-8
+exclude: 
+hyperlink_all: false
+line_numbers: false
+main_page: README.md
+markup: markdown
+page_dir: 
+show_hash: false
+tab_width: 8
+title: Always Be Contributing Documentation
+visibility: :protected
+webcvs: 

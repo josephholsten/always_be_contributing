@@ -13,10 +13,9 @@ Gem::Specification.new do |spec|
     Always Be Contributing counts who has
     contributing most to your organization on Github.
   EOF
-  spec.extra_rdoc_files  = %w[ LICENSE README.rdoc ]
-  spec.rdoc_options      << "--charset=UTF-8" <<
-                            "--title" << "Always Be Contributing Documentation" <<
-                            "--main"  << "README.rdoc"
+  spec.extra_rdoc_files  = %w[ LICENSE README.md ]
+  spec.rdoc_options      << "--title" << "Always Be Contributing Documentation" <<
+                            "--main"  << "README.md"
   spec.license           = 'ISC'
   spec.summary           = spec.description.split(/\.\s+/).first
   spec.files             = `git ls-files`.split($/)
@@ -25,5 +24,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rdoc'
+  spec.add_development_dependency 'rdoc', '>= 4.0.0'
 end

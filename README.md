@@ -2,6 +2,8 @@
 
 You've got a team of Committers. But who's the best?
 
+[![Build Status](https://travis-ci.org/josephholsten/always_be_contributing.png?branch=master)](https://travis-ci.org/josephholsten/always_be_contributing)
+
 ## Getting Started
 
     # Install

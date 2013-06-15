@@ -52,11 +52,15 @@ class TestUser < Minitest::Test
     assert_equal expected, u.contributions_since(Date.parse("2012/06/02"))
   end
 
-  def test_contributions_since
+  def test_contributions_between
     u = AlwaysBeContributing::User.new("bob")
     raw_contributions = '[["2012/06/01",1],["2012/06/02",2],["2012/06/03",3]]'
     URI.expects(:parse).returns(stub(read: raw_contributions))
 
-    assert_equal 5, u.contribution_count_since(Date.parse("2012/06/02"))
+    expected = [
+      AlwaysBeContributing::Contribution.new("2012/06/02", 2)
+    ]
+    june_2 = Date.new(2012, 6, 2)
+    assert_equal expected, u.contributions_between(june_2..june_2)
   end
 end

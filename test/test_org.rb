@@ -56,9 +56,9 @@ class TestOrg < Minitest::Test
     org_members = [stub(login: 'bob'), stub(login: 'alice')]
     Octokit.expects(:org_members).returns(org_members)
     AlwaysBeContributing::User.expects(:new).with('bob').
-      returns(stub(name: 'bob', contribution_count_since: 3))
+      returns(stub(name: 'bob', contribution_count: 3))
     AlwaysBeContributing::User.expects(:new).with('alice').
-      returns(stub(name: 'alice', contribution_count_since: 4))
+      returns(stub(name: 'alice', contribution_count: 4))
 
     contrib_counts = org.member_contribution_count_since(Date.today)
 

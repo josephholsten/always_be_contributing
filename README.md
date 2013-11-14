@@ -9,7 +9,7 @@ You've got a team of Committers. But who's the best?
     # Install
     gem install always_be_contributing
     # Configure github credentials
-    echo machine api.github.com login josephholsten password sekret >> ~/.netrc
+    echo 'machine api.github.com login <user> password <password>'>>~/.netrc
     # Run
     always-be-contributing simplymeasured
 

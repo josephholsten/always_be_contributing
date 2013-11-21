@@ -1,4 +1,5 @@
 require 'octokit'
+require 'peach'
 
 require 'always_be_contributing/user'
 
@@ -14,8 +15,9 @@ module AlwaysBeContributing
     # list by number of contributions
     def member_contribution_count(date_range)
       {}.tap do |contribution_counts|
-        members.each do |m|
+        members.peach(16) do |m|
           contribution_counts[m.name] = m.contribution_count(date_range)
+          yield if block_given?
         end
       end.
       sort_by {|u| u[1] }.

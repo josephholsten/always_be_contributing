@@ -1,6 +1,7 @@
 require 'always_be_contributing/core_ext/date/month_calculator'
 require 'always_be_contributing/org'
 require 'octokit'
+require 'ruby-progressbar'
 
 module AlwaysBeContributing
   class CLI
@@ -45,8 +46,10 @@ module AlwaysBeContributing
 
     def member_contribution_counts
       @member_contribution_counts ||= begin
-        Org.new(github_org).
-        member_contribution_count(date_range)
+        with_progress_bar(length: 80) do |pb|
+          Org.new(github_org).
+          member_contribution_count(date_range) { pb.increment }
+        end
       end
     end
 
@@ -65,6 +68,15 @@ module AlwaysBeContributing
                    '    YYYY-MM-DD..YYYY-MM-DD - inclusive-end range',
                    '    YYYY-MM-DD...YYYY-MM-DD - exclusive-end range'
       exit 1
+    end
+
+    private
+
+    def with_progress_bar(params={}, &block)
+      pb = ProgressBar.create(params)
+      result = yield(pb)
+      pb.finish
+      result
     end
   end
 end

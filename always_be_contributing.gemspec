@@ -29,4 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'mocha'
 
   spec.add_runtime_dependency 'octokit'
+  spec.add_runtime_dependency 'peach'
+  spec.add_runtime_dependency 'netrc'
+  spec.add_runtime_dependency 'ruby-progressbar'
 end

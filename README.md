@@ -17,6 +17,10 @@ You've got a team of Committers. But who's the best?
 [rdoc](http://rdoc.info/gems/always_be_contributing)
 [bugs](https://github.com/josephholsten/always_be_contributing/issues)
 
+## Two-Factor Authentication
+If you're using Two-Factor Authentication the password you use when configuring your github credentials should be your 40 character access token. 
+Create an Personal access token [here](https://github.com/settings/applications)
+
 ## TODO
 
 * Travis CI integrations

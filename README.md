@@ -24,7 +24,7 @@ Create an Personal access token [here](https://github.com/settings/applications)
 ## TODO
 
 * Travis CI integrations
-* tdd achievments ala [nose](http://exogen.github.io/nose-achievements/)
+* tdd achievements ala [nose](http://exogen.github.io/nose-achievements/)
 
 ## Metrics
 

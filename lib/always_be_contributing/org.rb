@@ -30,7 +30,7 @@ module AlwaysBeContributing
 
     private
     def member_ids
-      Octokit.org_members(name).map(&:login)
+      Octokit.org_members(name, per_page: 100).map(&:login)
     end
   end
 end

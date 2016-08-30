@@ -58,7 +58,8 @@ module AlwaysBeContributing
            "github-org: #{github_org}",
            "date range: #{date_range}",
            '---------------------'
-      member_contribution_counts.each {|u| puts "%15s %3i" % u }
+      #member_contribution_counts.each {|u| puts ("%15s %3i\n" % u) rescue nil }
+      member_contribution_counts.each {|u| puts (u.inspect) }
     end
 
     def exit_usage
